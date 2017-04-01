@@ -44,7 +44,7 @@ cur.execute("CREATE TABLE hell(datentime VARCHAR, someshit INTEGER, someothershi
 csv_data = csv.reader(file('target.csv'))
 for row in csv_data:
 
-    cur.execute('INSERT INTO hell VALUES("%s", "%s", "%s")', row)
+    cur.execute('INSERT INTO hell VALUES("%s", "%d", "%f")', row)
 
     #Commiting for further use
     cur.commit()
